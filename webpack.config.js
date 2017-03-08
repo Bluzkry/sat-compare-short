@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = {
-  context: path.join(__dirname, 'src'),
+  context: path.join(__dirname, 'client'),
   entry: [
     './main.js',
   ],
@@ -16,6 +16,15 @@ module.exports = {
         exclude: /node_modules/,
         use: ['babel-loader'],
       },
+      {
+        test: /\.css$/,
+        exclude: /node_modules/,
+        loader: 'style-loader!css-loader',
+      },
+      {
+        test: /\.(jpe?g|gif|png)$/,
+        loader: 'file-loader',
+      }
     ],
   },
   resolve: {
