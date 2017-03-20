@@ -1,5 +1,5 @@
 import React from 'react';
-require('./../../www/styles.css');
+require('./../../public/styles.css');
 
 class Submit extends React.Component {
   constructor() {
@@ -9,7 +9,7 @@ class Submit extends React.Component {
   render() {
     return (
       <section>
-      <form id="submission" action="/score" method="post">
+      <form id="submission" action="/api/score" method="post">
 
         <fieldset>
         <label> Please submit your SAT score:</label>
@@ -45,7 +45,7 @@ class Submit extends React.Component {
         <input type="submit" value="Submit"></input>
       </form>
       </section>
-    )
+    );
   }
 }
 export default Submit;

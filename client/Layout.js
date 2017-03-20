@@ -15,12 +15,12 @@ class Layout extends React.Component {
   render() {
     return (
       <Router history={hashHistory}>
-        <Route path ='/' component={Title}>
-        <IndexRoute path='/' component={Submit} />
+        <Route path='/' component={Title}>
+        <IndexRoute component={Submit} />
         <Route path='/score' component={Score} />
         </Route>
       </Router>
-    )
+    );
   }
 }
 export default Layout;

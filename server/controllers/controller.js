@@ -1,4 +1,4 @@
-const University = require('./db.js');
+const University = require('./../db/db.js');
 
 const convertIntoPercentile = (score, university) => {
   return University.find({'name': university}).exec()
@@ -10,10 +10,10 @@ const convertIntoPercentile = (score, university) => {
       const hundredthPercentile = seventyFifthPercentile - (median - seventyFifthPercentile);
       let studentPercentile = (score - zerothPercentile)/(hundredthPercentile - zerothPercentile);
       if (studentPercentile < 0) {
-        studentPercentile = 0
+        studentPercentile = 0;
       }
       if (studentPercentile > 1) {
-        studentPercentile = 1
+        studentPercentile = 1;
       }
       return Math.floor(studentPercentile*100);
     })

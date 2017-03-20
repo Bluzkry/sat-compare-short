@@ -4,7 +4,7 @@ import Layout from './Layout';
 
 document.addEventListener('DOMContentLoaded', function() {
   ReactDOM.render(
-    React.createElement(Layout),
+    <Layout />,
     document.getElementById('mount')
   );
 });

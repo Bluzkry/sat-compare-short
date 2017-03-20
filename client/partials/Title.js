@@ -1,5 +1,5 @@
 import React from 'react';
-require('./../../www/styles.css');
+require('./../../public/styles.css');
 
 class Title extends React.Component {
   render() {
@@ -10,7 +10,7 @@ class Title extends React.Component {
       </header>
       {this.props.children}
       </div>
-    )
+    );
   }
 }
 

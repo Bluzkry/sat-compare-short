@@ -1,6 +1,6 @@
 import React from 'react';
 import $ from 'jquery';
-require('./../../www/styles.css');
+require('./../../public/styles.css');
 
 class Score extends React.Component {
   constructor() {
@@ -9,7 +9,7 @@ class Score extends React.Component {
       score: null,
       university: null,
       percentile: null
-    }
+    };
   }
 
   componentWillMount() {
@@ -19,7 +19,7 @@ class Score extends React.Component {
   getUniversityData() {
     $.ajax({
       method: 'GET',
-      url: 'score',
+      url: 'api/score',
       success: data => {
         this.setState({
           score: data.score,
@@ -39,7 +39,7 @@ class Score extends React.Component {
         <input type="submit" value="Return"></input>
       </form>
       </section>
-    )
+    );
   }
 }
 export default Score;
